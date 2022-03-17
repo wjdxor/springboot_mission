@@ -43,7 +43,9 @@ public class BoardEntity extends BaseEntity {
 
     public List<PostEntity> getPostEntityList() { return postEntityList; }
 
-    public void setPostEntityList(List<PostEntity> postEntityList) { this.postEntityList = postEntityList; }
+    public void setPostEntityList(List<PostEntity> postEntityList) {
+        this.postEntityList = postEntityList;
+    }
 
     @Override
     public String toString() {
