@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>shop Regist</title>
+</head>
+<body>
+    <form th:action="@{/shop/regist}" method="post">
+        <input type="text" name="shopname" placeholder="아이디"><br>
+    <!--    <input type="password" name="" placeholder="비밀번호"><br>-->
+    <!--    <input type="password" name="password_check" placeholder="비밀번호 확인"><br>-->
+    <!--    is shop owner<input type="checkbox" name="isShopOwner" value=true>-->
+<!--        <input type="hidden" name="owner_id" value= sec:authentication="id" ><br>-->
+        <button type="submit">가게등록</button>
+<!--        <span sec:authentication="name"></span>-->
+    </form>
+
+</body>
+</html>
