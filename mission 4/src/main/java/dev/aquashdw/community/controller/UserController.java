@@ -78,4 +78,9 @@ public class UserController {
         this.userService.deleteUser(id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("login")
+    public String login(){
+        return "login-form";
+    }
 }

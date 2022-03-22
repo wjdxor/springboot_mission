@@ -10,9 +10,11 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+@Service
 public class CustomUserDetailsService implements UserDetailsService {
     private static final Logger logger = LoggerFactory.getLogger(CustomUserDetailsService.class);
     private final UserRepository userRepository;
@@ -25,10 +27,10 @@ public class CustomUserDetailsService implements UserDetailsService {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
 //        테스트
-        final UserEntity testUserEntity = new UserEntity();
-        testUserEntity.setUsername("entity_user");
-        testUserEntity.setPassword(passwordEncoder.encode("test1pass"));
-        this.userRepository.save(testUserEntity);
+//        final UserEntity testUserEntity = new UserEntity();
+//        testUserEntity.setUsername("entity_user");
+//        testUserEntity.setPassword(passwordEncoder.encode("test1pass"));
+//        this.userRepository.save(testUserEntity);
     }
 
     @Override
